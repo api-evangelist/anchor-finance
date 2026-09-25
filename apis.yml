@@ -1,23 +1,64 @@
 aid: anchor-finance
+
 name: Anchor Finance
-description: 'Anchor Finance is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+
+image: https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/f8a220ff-552d-40b2-8101-9b3fa358919f/id-preview-4a9faa7c--0619f550-3b13-480e-9fef-8622cdb86010.lovable.app-1774453650516.png
+
+description: 'Anchored Finance is a premier auto finance lender offering quick approvals and funding for used auto loans. With over 50 years of combined experience, the company provides tailored financing solutions to customers, emphasizing speed, reliability, and personalized service across its nationwide network.'
+
 url: https://raw.githubusercontent.com/api-evangelist/anchor-finance/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-24 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-09-24'
+
 modified: '2026-09-24'
+
 tags:
+- Finance
+- Auto Loans
+- Lending
+- Financial Services
 - Company
-apis: []
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: Hosts
+  url: hosts/anchor-finance-hosts.yml
+- type: Vendors
+  url: vendors/anchor-finance-vendors.yml
+- type: DomainSecurity
+  url: security/anchor-finance-domain-security.yml
 - type: Website
-  url: https://www.nasdaqprivatemarket.com/
+  url: https://anchoredfinance.com/
+
+apis: []
+
+x-coverage:
+  state: unreadable
+  reason: no-machine-readable-spec
+  detail: No OpenAPI, AsyncAPI, GraphQL, or other machine-readable contract found on anchoredfinance.com or api.anchoredfinance.com.
+  evidence:
+    - url: https://anchoredfinance.com/api-docs
+      status: 200
+    - url: https://anchoredfinance.com/docs
+      status: 200
+  checked: 2026-09-24
+x-enrichment:
+  date: '2026-09-24'
+  status: enriched
+  artifacts_added: 5
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local
